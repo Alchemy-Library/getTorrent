@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="acf221df-9dcb-4967-bc43-7f424a7f5ee4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/getTorrents.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/sites/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/torrent/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/url/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_debug/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_debug/sample.my.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_debug/test.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/Chrome.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/Chromium.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/account/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/account/my.example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/login.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeline/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeline/delete.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tweet/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tweet/unretweet.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tweet/untweet.py" beforeDir="false" />
@@ -35,6 +22,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
@@ -43,12 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="getTorrents" />
@@ -82,16 +77,5 @@
       <updated>1690809793470</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

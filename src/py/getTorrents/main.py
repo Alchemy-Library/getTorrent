@@ -1,8 +1,10 @@
+import time
+
+from sites import *
 from browser.Chrome import closeChrome
-from profile.login import login
-from timeline.delete import deleteEntireTimeline
 
+kwd = "kotlin android"
 
-# login()
-# deleteEntireTimeline()
-# closeChrome()
+tests(kwd)
+closeChrome()
+# time.sleep(180)
