@@ -47,8 +47,10 @@ def openTorrentPages(pages):
         if i > 5:
             break
 
-
-tors = searchTorrents()
-print(tors)
-openTorrentPages(tors)
-openPage(tors[3])
+if __name__ == '__main__':
+    tors = searchTorrents()
+    print(tors)
+    newTab(2)
+    openPage(tors[1])
+    html = driver.page_source
+    print(html)
