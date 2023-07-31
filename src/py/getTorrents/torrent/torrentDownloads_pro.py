@@ -29,7 +29,18 @@ def searchTorrents():
     return torrent
 
 
-def openTorrentPage(pages):
+def countTabs():
+    handles = len(driver.window_handles)
+    return handles
+
+
+def newTab(max=99):
+    if countTabs() < max:
+        driver.switch_to.new_window('tab')
+
+
+def openTorrentPages(pages):
+    newTab(2)
     for i in pages:
         openPage(i, 2)
         print(f"{i} opened")
@@ -37,6 +48,7 @@ def openTorrentPage(pages):
             break
 
 
-pages = searchTorrents()
-print("Hello")
-print(pages)
+tors = searchTorrents()
+print(tors)
+openTorrentPages(tors)
+openPage(tors[3])
