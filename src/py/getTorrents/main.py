@@ -1,5 +1,10 @@
-from browser.Chromium import *
-from browser.Chrome import *
+from browser.Chrome import closeChrome
+from profile.login import login
+from timeline.delete import deleteEntireTimeline
 
-test_chrome()
-test_chromium()
+
+login()
+
+deleteEntireTimeline()
+
+closeChrome()

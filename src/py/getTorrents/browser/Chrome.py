@@ -4,9 +4,11 @@ from selenium import webdriver
 driver = webdriver.Chrome()
 
 
-def test_chrome():
-    music = "https://www.youtube.com/watch?v=TbvWnJh9e-g&t=902s&ab_channel=RealScience"
+def openPage(page, keep=False):
+    driver.get(page)
+    if keep:
+        time.sleep(3600)
 
-    driver.get(music)
-    time.sleep(17)
+
+def closeChrome():
     driver.quit()

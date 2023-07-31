@@ -1,4 +1,7 @@
+import time
 
+def hour():
+    time.sleep(3600)
 def find_Chromium():
     import subprocess
 
