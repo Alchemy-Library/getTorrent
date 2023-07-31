@@ -63,10 +63,28 @@ def getDownloadLinks(tors, max=50):
         openPage(tor, 1)
         links.append(getDownloadLink())
         print(i)
+    closeTab()
     return links
 
+def closeTab():
+    parent = driver.window_handles[0]
+    chld = driver.window_handles[1]
+    driver.switch_to.window(chld)
+    driver.close()
+
+def dlTorrent(l):
+    newTab()
+    openPage(l)
+
+def downloadTorrents(links):
+    for l in links:
+        dlTorrent(l)
+    for l in links:
+        closeTab()
+        time.sleep(0.5)
 
 if __name__ == '__main__':
     tors = searchTorrents()
     links = getDownloadLinks(tors, 3)
     print(links)
+    downloadTorrents(links)
