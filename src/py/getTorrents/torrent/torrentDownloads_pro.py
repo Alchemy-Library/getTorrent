@@ -71,6 +71,7 @@ def closeTab():
     chld = driver.window_handles[1]
     driver.switch_to.window(chld)
     driver.close()
+    driver.switch_to.window(parent)
 
 def dlTorrent(l):
     newTab()
@@ -85,6 +86,6 @@ def downloadTorrents(links):
 
 if __name__ == '__main__':
     tors = searchTorrents()
-    links = getDownloadLinks(tors, 3)
+    links = getDownloadLinks(tors, 2)
     print(links)
     downloadTorrents(links)
