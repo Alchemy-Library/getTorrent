@@ -1,0 +1,33 @@
+vagrant: false
+
+# Change this file to add dependency artifacts, repos, & roles!
+repo: [
+  { repo: "https://github.com/Source-Graph/Virtualenv.python.git", name: "Virtualenv.python"},
+  { repo: "https://github.com/Uni-Apps/Browser.git", name: "Browser"},
+  { repo: "https://github.com/Unicorn-OS/Snapcraft.git", name: "Snapcraft"},
+  { repo: "https://github.com/Unicorn-OS/Apt-cacher.pkg.git", name: "Apt-cacher.pkg"},
+  { repo: "https://github.com/Unicorn-OS/Gnome.desktop.git", name: "Gnome.desktop"},
+  { repo: "https://github.com/Unicorn-OS/OS.Change-password.git", name: "os.Change-password"},
+  { repo: "https://github.com/Source-Graph/VisualStudioCode.git", name: "VisualStudioCode"},
+  ]
+
+role: [
+  { git: "Virtualenv.python", name: "Virtualenv", path: "src/ansible/Virtualenv"},
+  { git: "Browser", name: "Browser", path: "src/ansible/roles/Browser"},
+  { git: "Snapcraft", name: "Snapcraft", path: "src/ansible/roles/Snapcraft"},
+  { git: "Apt-cacher.pkg", name: "AptCacherNg", path: "src/ansible/roles/AptCacherNg"},
+  { git: "Gnome.desktop", name: "Gnome", path: "src/ansible/roles/Gnome"},
+  { git: "os.Change-password", name: "os", path: "src/ansible/roles/os"},
+  { git: "VisualStudioCode", name: "Visual Studio Code", path: "src/ansible/roles/Visual Studio Code"},
+  ]
+
+library: [
+  # { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
+  ]
+
+# set Inventory
+dynamic_inventory: "{{static_inventory}}"
+test_inventory: true
+
+# dependencies
+git_fetch_update: true

@@ -1,0 +1,12 @@
+- name: create submodule dir
+  ansible.builtin.file:
+    path: "{{submodule_dir}}"
+    state: directory
+
+
+- name: link dependency into it's own folder
+  ansible.builtin.file:
+    src: "{{git_dir}}/{{item.name}}"
+    dest: "{{submodule_dir}}/{{item.name}}"
+    state: link
+  loop: "{{repo}}"

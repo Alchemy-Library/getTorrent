@@ -1,0 +1,15 @@
+dep_home: ".dep"
+mirror: ".mirror"
+role_dir: "{{dep_home}}"
+depends: "{{dep_home}}/{{mirror}}"
+
+# Folder
+depend_dir: "{{playbook_dir}}/{{depends}}"
+submodule_dir: "{{ansible_env.HOME}}/src/subm"
+
+# SubFolders
+artifact_dir: "{{depend_dir}}/artifact"
+git_dir: "{{depend_dir}}/git"
+
+# Inventory
+static_inventory: "{{dep_home}}/pre/files/inventory/test/hosts"
