@@ -47,10 +47,19 @@ def openTorrentPages(pages):
         if i > 5:
             break
 
+
+def getDownloadLinks(tors, max=50):
+    newTab(2)
+    links = []
+    for i, tor in enumerate(tors):
+        openPage(tor, 1)
+        links.append(getDownloadLink())
+        print(i)
+        if i > max:
+            break
+    return links
+
 if __name__ == '__main__':
     tors = searchTorrents()
-    print(tors)
-    newTab(2)
-    openPage(tors[1])
-    html = driver.page_source
-    print(html)
+    links = getDownloadLinks(tors, 3)
+    print(links)
