@@ -5,7 +5,7 @@ site = ["https://www.torrentdownloads.pro", "https://torrentgalaxy.to", "https:/
 
 
 class Search():
-    def __int__(self, kwd):
+    def __init__(self, kwd):
         self.kwd = kwd
         self.search = self.get(kwd)
 
