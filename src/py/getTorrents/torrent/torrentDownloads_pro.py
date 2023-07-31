@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
 
-def openPage(page, sleep=3):
+def openPage(page, sleep=1):
     driver.get(page)
     time.sleep(sleep)
 
@@ -48,16 +48,23 @@ def openTorrentPages(pages):
             break
 
 
+def getDownloadLink():
+    download = driver.find_element(By.CLASS_NAME, "download")
+    link = download.find_elements(By.TAG_NAME, "a")[1]
+    return link.get_attribute('href')
+
+
 def getDownloadLinks(tors, max=50):
     newTab(2)
     links = []
     for i, tor in enumerate(tors):
+        if i > (max - 1):
+            break
         openPage(tor, 1)
         links.append(getDownloadLink())
         print(i)
-        if i > max:
-            break
     return links
+
 
 if __name__ == '__main__':
     tors = searchTorrents()
