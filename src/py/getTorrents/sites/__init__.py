@@ -33,8 +33,12 @@ class Search():
         openPage(self.search[self.i])
         self.i += 1
 
-def tests(kwd="android studio"):
+def tests(kwd="kotlin android"):
     search = Search(kwd)
     print(search.search)
     search.openIter()
     time.sleep(1800)
+
+if __name__ == '__main__':
+    kwd = "kotlin android"
+    tests(kwd)

@@ -1,10 +1,5 @@
-import time
-
-from sites import *
-from browser.Chrome import closeChrome
+from torrent.torrentDownloads_pro import downloadAll
 
 kwd = "kotlin android"
 
-tests(kwd)
-closeChrome()
-# time.sleep(180)
+downloadAll(50)

@@ -1,7 +1,6 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 
@@ -66,6 +65,7 @@ def getDownloadLinks(tors, max=50):
     closeTab()
     return links
 
+
 def closeTab():
     parent = driver.window_handles[0]
     chld = driver.window_handles[1]
@@ -73,9 +73,11 @@ def closeTab():
     driver.close()
     driver.switch_to.window(parent)
 
+
 def dlTorrent(l):
     newTab()
     openPage(l)
+
 
 def downloadTorrents(links):
     for l in links:
@@ -84,8 +86,12 @@ def downloadTorrents(links):
         closeTab()
         time.sleep(0.5)
 
-if __name__ == '__main__':
+
+def downloadAll(num):
     tors = searchTorrents()
-    links = getDownloadLinks(tors, 2)
-    print(links)
+    links = getDownloadLinks(tors, num)
     downloadTorrents(links)
+
+
+if __name__ == '__main__':
+    downloadAll(50)
